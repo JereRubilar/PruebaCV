@@ -1,0 +1,122 @@
+:root,[data-theme="light"] {
+    --bg-primary: #ECEBDE;
+    --text-color: #1A1A1A;
+    --fill: #D7D3BF;
+    --accent: #C1BAA1;
+    --outlines: #A59D84;
+}
+
+[data-theme="dark"]{
+    --bg-primary: #2C2C2C;
+    --text-color: #ffff;
+    --fill: #522546;
+    --accent: #88304E;
+    --outlines: #F7374F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'tboi';
+}
+
+html{
+    background-color: var(--bg-primary);
+    transition: background-color 0.6s, color 0.6s;
+}
+
+body {
+    color: var(--text-color);
+    transition: background-color 0.6s, color 0.6s;
+}
+
+body *{
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.barraNav {
+    background-color: var(--fill);
+}
+
+.offcanvas {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-color) !important;
+}
+
+.navbar-brand{
+    color: var(--text-color)!important;
+}
+.nav-link {
+    color: var(--text-color) !important;
+}
+
+.logoNav {
+    width: 2em;
+    height: 2em;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--accent);
+    -webkit-transition: .0.6s;
+    transition: .0.6s;
+}
+
+.slider:before {
+    position: absolute;
+    content: url(../Icons/Lightmode.svg);
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--bg-primary);
+    -webkit-transition: .0.6s;
+    transition: .0.6s;
+    }
+
+input:checked + .slider {
+    background-color: var(--accent);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--accent);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content: url(../Icons/Darkmode.svg);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@font-face {
+    font-family: 'tboi';
+    src: url(../Fonts/upheaval/upheavtt.ttf);
+}
