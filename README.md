@@ -10,7 +10,7 @@ Puedes visualizar esta pagina haciendo click [aqui]
 
 ## Herramientas y lenguajes usados :wrench:
 
-- HTML5 
+- HTML5
 - CSS3
 - JavaScript
 - Bootstrap 5.3

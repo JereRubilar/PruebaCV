@@ -1,6 +1,7 @@
 :root,[data-theme="light"] {
     --bg-primary: #ECEBDE;
     --text-color: #1A1A1A;
+    --text-color-disabled: #3e3e3e;
     --fill: #D7D3BF;
     --accent: #C1BAA1;
     --outlines: #A59D84;
@@ -9,6 +10,7 @@
 [data-theme="dark"]{
     --bg-primary: #2C2C2C;
     --text-color: #ffff;
+    --text-color-disabled: #c4c4c4;
     --fill: #522546;
     --accent: #88304E;
     --outlines: #F7374F;
@@ -18,7 +20,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'tboi';
+    font-family: 'upheaval';
+    color: var(--text-color);
 }
 
 html{
@@ -27,7 +30,7 @@ html{
 }
 
 body {
-    color: var(--text-color);
+
     transition: background-color 0.6s, color 0.6s;
 }
 
@@ -91,7 +94,7 @@ body *{
     background-color: var(--bg-primary);
     -webkit-transition: .0.6s;
     transition: .0.6s;
-    }
+}
 
 input:checked + .slider {
     background-color: var(--accent);
@@ -116,7 +119,66 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.navbar-toggler{
+    border: none !important;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-link {
+    color: var(--text-color-disabled) !important;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-color) !important;
+}
+
+.Caja-paginas{
+    height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.PaginasCrsl {
+    width: 500%;
+    transition: all 1s ease-in-out;
+}
+
+.pagina {
+    height: 100vh;
+
+}
+
+
+
+@media (min-width: 991px) {
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--outlines);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.footer {
+    background-color: var(--fill);
+}
+
 @font-face {
-    font-family: 'tboi';
+    font-family: 'upheaval';
     src: url(../Fonts/upheaval/upheavtt.ttf);
 }

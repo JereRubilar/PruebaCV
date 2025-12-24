@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar barraNav navbar-expand-lg fixed-top py-3 rounded-bottom-4 shadow">
+    <nav class="navbar barraNav navbar-expand-lg fixed-top py-3 rounded-4 m-3 shadow">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="index.html">
                 <img class="logoNav" src="./Assets/Icons/isaac.ico">
@@ -23,19 +23,19 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-3 active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" data-index="0" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3" href="#">Link</a>
+                            <a class="nav-link" href="#" data-index="1">Habilidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3" href="#">Link</a>
+                            <a class="nav-link" href="#" data-index="2">Experiencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3" href="#">Link</a>
+                            <a class="nav-link" href="#" data-index="3">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3" href="#">Link</a>
+                            <a class="nav-link" href="#" data-index="4">Links</a>
                         </li>
                     </ul>
                     <span class="my-1">
@@ -51,9 +51,35 @@
             </button>
         </div>
     </nav>
-    <div class="container-lg">
 
+    <div class="container-fluid overflow-hidden Caja-paginas">
+        <div class="PaginasCrsl d-flex" id="PaginasCrsl">
+            <div class="pagina w-100 justify-content-center align-items-center d-flex flex-column gap-3 1">
+                <h1>1</h1>
+            </div>
+            <div class="pagina w-100 justify-content-center align-items-center d-flex flex-column gap-3 2">
+                <h1>2</h1>
+            </div>
+            <div class="pagina w-100 justify-content-center align-items-center d-flex flex-column gap-3 3">
+                <h1>3</h1>
+            </div>
+            <div class="pagina w-100 justify-content-center align-items-center d-flex flex-column gap-3 4">
+                <h1>4</h1>
+            </div>
+            <div class="pagina w-100 justify-content-center align-items-center d-flex flex-column gap-3 5">
+                <h1>5</h1>
+            </div>
+        </div>   
     </div>
+    
+    <footer class="container-fluid footer">
+        xxx
+        <div class="row">
+
+        </div>
+    </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./Assets/Scripts/StyleJs.js"></script>
