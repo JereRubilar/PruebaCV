@@ -6,7 +6,7 @@ En él podemos encontrar diferentes ejemplos de diseños modernos, responsivos y
 
 ## Visualización en vivo :globe_with_meridians:
 
-Puedes visualizar esta pagina haciendo click [aqui]
+Puedes visualizar esta pagina haciendo click [aqui](https://jererubilar.github.io/PruebaCV/)
 
 ## Herramientas y lenguajes usados :wrench:
 
