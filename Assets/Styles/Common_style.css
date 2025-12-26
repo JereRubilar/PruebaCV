@@ -38,6 +38,17 @@ body {
 
 body *{
     transition: background-color 0.6s ease, color 0.6s ease;
+    z-index: 1;
+}
+
+#CursorBG {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 0;
+    background-color: var(--bg-primary);
 }
 
 .barraNav {
@@ -154,9 +165,51 @@ input:checked + .slider:before {
     height: 100vh;
 }
 
+.cajaPresentacion {
+    background-color: var(--accent);
+    font-size: 1.1em;
+}
+
+#Justin {
+    width: 20em;
+    height: 20em;
+    border: solid 0.4em var(--accent-muted);
+}
+
+.p2 {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.cajaHabilidades {
+    background-color: var(--accent);
+    font-size: 1.2em;
+}
+
+.cajaProyecto {
+    background-color: var(--accent);
+    transition: 0.2s ease-in-out;
+}
+
+.cajaProyecto:hover {
+    background-color: var(--accent-muted);
+    scale: 1.05;
+}
+
+.linksProyectos {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .cajasExp {
     background-color: var(--accent);
     height: 26em;
+    transition: 0.2s ease-in-out;
+}
+
+.cajasExp:hover {
+    background-color: var(--accent-muted);
+    scale: 1.05;
 }
 
 .formulario{
@@ -175,6 +228,7 @@ input:checked + .slider:before {
 
 .Campos input, textarea {
     color: var(--text-color) !important;
+    transition: 0.2s ease-in-out;
 }
 
 .Campos input:hover, textarea:hover {
@@ -227,6 +281,11 @@ input:checked + .slider:before {
     border: none;
     width: 25em;
     height: 2em;
+    transition: 0.2s ease-in-out;
+}
+
+#sendBtn:hover {
+    background-color: var(--accent-muted) !important;
 }
 
 #textoContacto {
@@ -280,31 +339,65 @@ input:checked + .slider:before {
     font-size: 1.2em;
 }
 
-footer {
+.footer {
     background-color: var(--fill);
 }
 
-
-
-@media (min-width: 991px) {
-    .nav-link::before{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: var(--outlines);
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
+@media (max-width: 991px) {
+    .pagina {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 60px;
     }
 
-    .nav-link:hover::before, .nav-link.active::before{
-        width: 100%;
-        visibility: visible;
+    .row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .col-6 {
+        width: 100% !important;
+    }
+
+    #Justin {
+        width: 15em;
+        height: 15em;
+    }
+
+    .cajasExp {
+        height: auto;
+        margin-bottom: 1rem;
     }
 }
+
+@media (max-width: 767px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    #Nombre, #Email, #Mensaje {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #sendBtn {
+        width: 100%;
+    }
+
+    #textoContacto, #textoLinks {
+        height: auto !important;
+        padding: 1.5rem;
+    }
+
+    .cajaPresentacion p {
+        font-size: 0.9em;
+    }
+
+    .PaginasCrsl {
+        margin-top: 2em;
+    }
+}
+
 
 @font-face {
     font-family: 'upheaval';

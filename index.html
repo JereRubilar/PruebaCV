@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./Assets/Styles/Common_style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="navbar barraNav navbar-expand-lg fixed-top py-3 rounded-4 m-3 shadow">
+<body class="overflow-x-hidden">
+    <canvas id="CursorBG"></canvas>
+    <nav class="navbar barraNav navbar-expand-lg sticky-top py-3 rounded-4 m-3 shadow-lg">
         <div class="container-fluid">
             <a class="navbar-brand me-auto" href="index.html">
                 <img class="logoNav" src="./Assets/Icons/isaac.ico">
@@ -35,7 +36,7 @@
                             <a class="nav-link" href="#" data-index="3">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-index="4">Links</a>
+                            <a class="nav-link" href="#" data-index="4">Enlaces</a>
                         </li>
                     </ul>
                     <span class="my-1">
@@ -51,28 +52,76 @@
             </button>
         </div>
     </nav>
-    <div class="container-fluid overflow-hidden Caja-paginas mt-5 mb-3">
+    <div class="container-fluid Caja-paginas mb-3">
         <div class="PaginasCrsl d-flex" id="PaginasCrsl">
-            <div class="pagina justify-content-center align-items-center d-flex flex-column gap-3 p-3 p1">
-                <h1>Inicio</h1>
+            <div class="pagina justify-content-center align-items-center d-flex flex-column pt-4 gap-3 p-3 p1">
+                <div class="container-xl d-flex flex-column align-items-center text-center rounded-3 p-3 shadow-sm cajaPresentacion">
+                    <img class="rounded-circle" src="./Assets/Images/Justin-time.jpg" alt="Justin" id="Justin">
+                    <h1>Bienvenidos a mi CV interactivo</h1>
+                    <p>Me llamo Jeremías Rubilar y en esta pagina web se encuentra un resumen de mi trayectoria como desarrollador web,
+                        asi como enlaces a diferentes proyectos en los que he trabajado, los cuales reflejan mi pasión por transformar ideas complejas en interfaces digitales funcionales. 
+                        Siempre estoy en constante aprendizaje, buscando nuevos desafíos técnicos que me permitan expandir mis límites creativos y dominar las últimas tendencias del sector. 
+                    </p>
+                </div>
             </div>
             <div class="pagina justify-content-center align-items-center d-flex flex-column gap-3 p-3 p2">
-                <h1>Habilidades</h1>
+                <div class="row d-flex">
+                    <div class="d-flex flex-column container-fluid col-6 d-flex gap-4 flex-column">
+                        <h3>Proyectos</h3>
+                        <div class="rounded-3 shadow-sm p-2 cajaProyecto">
+                            <a class="linksProyectos" href="#">
+                                <h4>Blog /Ask.Ans.Run</h4>
+                                <p>Un sencillo foro de texto e imagenes usado para resolver dudas sobre codigo.<br>
+                                    Viene incorporado con un sistema de registro e inicio de sesion asi como actualizaciones de post en tiempo real</p>
+                            </a>
+                        </div>
+                        <div class="rounded-3 shadow-sm p-2 cajaProyecto">
+                            <a class="linksProyectos" href="#">
+                            <h4>Sistema de compras app Paris.com</h4>
+                            <p>Aplicación web diseñada para optimizar la experiencia de usuario en el flujo de compra.<br>
+                                Incluye un carrito de compras dinámico, integración de pasarelas de pago y un panel de seguimiento de pedidos que actualiza el estado de la transacción de forma inmediata.</p>
+                            </a>
+                        </div>
+                        <div class="rounded-3 shadow-sm p-2 cajaProyecto">
+                            <a class="linksProyectos" href="#">
+                            <h4>Control interno de stock supermercados Jumbo</h4>
+                            <p>Plataforma de gestión de inventarios desarrollada para mejorar la logística interna.<br>
+                                Permite el monitoreo de entrada y salida de productos en tiempo real, generación de alertas automáticas para reposición y reportes detallados para la toma de decisiones estratégicas.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column container-fluid col-6">
+                        <h2>Habilidades</h2>
+                        <div class="container-fluid rounded-3 shadow-sm p-3 cajaHabilidades">
+                            <p>Este es un pequeño listado de las aptitudes tanto de Front-end como de Back-end que poseo:</p>
+                            <ul>
+                                <li>HTML, CSS y JavaScript</li>
+                                <li>Java</li>
+                                <li>MySQL</li>
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>PHP</li>
+                                <li>Git</li>
+                            </ul>
+                            <p>Y a la izquierda pueden revisar diferentes proyectos en los que he colaborado</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="pagina justify-content-center align-items-start d-flex flex-column gap-3 p-3 p3">
                 <h1 class="align-self-start">Experiencia</h1>
                 <div class="row container-fluid gap-2">
-                    <div class="col p-2 m-1 d-flex flex-column gap-2 cajasExp">
+                    <div class="col p-2 m-1 d-flex flex-column gap-2 rounded-2 shadow-sm cajasExp">
                         <h3>Web Freelance & Junior Dev</h3>
                         <h4>2021 - 2022</h4>
                         <p>Comencé mi camino creando soluciones personalizadas para pequeños negocios. Me enfoqué en el desarrollo de aterrizaje (landing pages) y sitios institucionales utilizando HTML, CSS y JavaScript, asegurando diseños responsivos y optimización SEO básica.</p>
                     </div>
-                    <div class="col p-2 m-1 d-flex flex-column gap-2 cajasExp">
+                    <div class="col p-2 m-1 d-flex flex-column gap-2 rounded-2 shadow-sm cajasExp">
                         <h3>Frontend Developer en "Almacenes Paris"</h3>
                         <h4>2022 - 2023</h4>
                         <p>Especializado en la creación de interfaces dinámicas y modernas. Trabajé con frameworks como React y Bootstrap para agilizar el despliegue de plataformas e-commerce, mejorando la velocidad de carga en un 30% y colaborando estrechamente con equipos de diseño UI/UX.</p>
                     </div>
-                    <div class="col p-2 m-1 d-flex flex-column gap-2 cajasExp">
+                    <div class="col p-2 m-1 d-flex flex-column gap-2 rounded-2 shadow-sm cajasExp">
                         <h3>Full Stack Developer en "Supermercados Jumbo"</h3>
                         <h4>2023 - Presente</h4>
                         <p>Actualmente lidero el desarrollo de aplicaciones web escalables. Me encargo tanto de la arquitectura del frontend como de la integración con bases de datos y APIs en el backend, utilizando Node.js y bases de datos NoSQL para gestionar sistemas de alta demanda.</p>
@@ -82,11 +131,11 @@
             <div class="pagina justify-content-center align-items-center d-flex flex-column row gap-3 p-3 p4">
                 <div class="col-6 rounded-3 shadow-sm h-75 justify-content-center text-center d-flex flex-column gap-3" id="textoContacto">
                     <h2>¿Quieres contactarme?</h2>
-                    <p>Enviame un mensaje directamente por esta web sobre cualquier duda ya sea sobre mis proyectos, colaboraciones o sugerencias<br>
-                    Recuerda que tus datos jamás seran compartido o usados en beneficio propio, adelante no tengas miedo!</p>
+                    <p>Envíame un mensaje directamente por esta web sobre cualquier duda ya sea sobre mis proyectos, colaboraciones o sugerencias<br>
+                    Recuerda que tus datos jamás serán compartido o usados en beneficio propio, adelante no tengas miedo!</p>
                 </div>
                 <div class="col-6 d-flex flex-column gap-4">
-                    <h2>Envia tu mensaje aqui</h2>
+                    <h2>Envía tu mensaje aquí</h2>
                     <form class="d-flex flex-column gap-2 formulario" id="form">
                         <div class="Campos">
                             <label class="mb-2" for="Nombre">Nombre</label>
@@ -132,21 +181,21 @@
                         Mail</a>
                     </div>
                     <div class="col-6 rounded-3 shadow-sm h-75 justify-content-center text-center d-flex flex-column gap-3" id="textoLinks">
-                        <h2>¿Buscas más de mis proyectos o metodos de contacto?</h2>
-                        <p> Aqui tienes diferentes enlaces a diferentes plataformas es donde podras revisar más trabajos en donde he colaborado
+                        <h2>¿Buscas más de mis proyectos o métodos de contacto?</h2>
+                        <p> Aquí tienes diferentes enlaces a diferentes plataformas en donde podrás revisar más trabajos en donde he colaborado
                             o redes sociales donde puedes contactarme de manera más directa.<br>
-                            No dudes en visitarlos todos!
+                            ¡No dudes en visitarlos todos!
                         </p>
 
                 </div>
             </div>
         </div>   
     </div>  
-    <footer class="container-fluid pb-2 pt-3 text-end shadow-sm rounded-top-4">
+    <div class="container-fluid fixed-bottom pb-2 pt-3 text-end shadow-sm rounded-top-4 footer">
         <span class="me-2">Esta pagina fue creada por Jeremías Rubilar bajo licencia GNU 3.0</span>
-    </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./Assets/Scripts/Responsividad.js"></script>
     <script src="./Assets/Scripts/StyleJs.js"></script>
     <script src="./Assets/Scripts/Formulario.js"></script>
 </body>
